@@ -1,0 +1,28 @@
+(deffunction primo (?n)
+(bind ?c 0)
+(loop-for-count(?i 1 ?n)
+(bind ?m (mod ?n ?i))
+(if "=" ?m 0) then
+(bind ?c (+ ?c 1))
+)
+)
+(if "=" ?c 2)then
+(printout t "primo" crlf)
+else
+(printout t "no es primo" crlf)
+)
+)
+_________________________
+Correr funcion
+(printout t (primo 7) crlf)
+
+ # serie fibonacii
+
+(deffunction fibo(?x)
+(if (< ?x 2) then 
+?x 
+else
+(+ (fibo(- ?x 1))(fibo(- ?x 2)))) 
+)
+
+(printout t (fibo 3) crlf)
